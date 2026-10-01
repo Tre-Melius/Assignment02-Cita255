@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assingment2.MainPage">
+
+    <Grid ColumnDefinitions="Auto,Auto" RowDefinitions="auto,auto">
+        <CollectionView Grid.Column="0" Grid.Row="0" x:Name="MygamesList">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding .}" FontSize="16" FontFamily="ZenzaiItacha"/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <CollectionView Grid.Column="1" Grid.Row="0" x:Name="MygamesPlaytimeList">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding .}" FontSize="20" FontFamily="MingImperial"/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Grid.Column="0" 
+                Grid.Row="1" 
+                Text="Add Game" 
+                Clicked="AddGame_Clicked"/>
+    </Grid>
+
+</ContentPage>
